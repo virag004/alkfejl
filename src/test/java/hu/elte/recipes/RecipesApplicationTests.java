@@ -1,4 +1,4 @@
-package hu.elte.Recipes;
+package hu.elte.recipes;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
