@@ -1,0 +1,12 @@
+@import "../assets/custom";
+
+body {
+    background-image: url("../assets/images/Benedetta.jpg");
+    width: 1920;
+    padding: 30px;
+}
+
+.mat-toolbar.mat-primary {
+    background: #ffe79a;
+    color: $font-color;
+}

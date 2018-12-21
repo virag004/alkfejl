@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Recept hozzáadása</h1>
+        <form
+          (submit)="save(recipeForm)"
+          #songForm="ngForm"
+          class="row"
+        >
+          <mat-form-field class="col">
+            <input
+              [(ngModel)]="model.name"
+              name="name"
+              #name="ngModel"
+              matInput
+              placeholder="Receptnév"
+              required
+              minlength="3"
+            >
+            <mat-error *ngIf="name.invalid">
+              Kötelező megadnod nevet.
+            </mat-error>
+            <mat-error *ngIf="name.invalid && name.errors['minlength']">
+              {{ name.errors['minlength'].requiredLength }} hosszúságú nevet adj meg minimum.
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="col">
+            <input
+              [(ngModel)]="model.picture"
+              name="picture"
+              #picture="ngModel"
+              matInput
+              placeholder="Kép"
+              required
+            >
+            <mat-error *ngIf="picture.invalid">
+              Adj hozzá képet, így mások előszeretettel fogják kipróbálni a receptedet.
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="col">
+              <input
+                [(ngModel)]="model.ingredients"
+                name="ingredients"
+                #ingredients="ngModel"
+                matInput
+                placeholder="Hozzávalók nevei"
+                required
+                minLength="5"
+              >
+              <mat-error *ngIf="ingredients.invalid && ingredients.errors['minlength']">
+                Hozzávalók nélkül nem készül el az étel.
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="col">
+                <input
+                  [(ngModel)]="model.instructions"
+                  name="instructions"
+                  #instructions="ngModel"
+                  matInput
+                  placeholder="Lépések"
+                  required
+                  minLength="5"
+                >
+                <mat-error *ngIf="instructions.invalid && instructions.errors['minlength']">
+                  Ha nem teszünk semmit nem készül el az étel.
+                </mat-error>
+              </mat-form-field>
+      
+          <button
+            mat-button
+          >Mentés</button>
+        </form>
+      </div>
+    </div>
+    <p>A hozzávalókat és a lépéseket vesszővel elválasztva írd be kérlek.</p>
+  </div>
