@@ -1,0 +1,32 @@
+@import "../../assets/custom";
+
+.steps {
+    counter-reset: item;
+  }
+  .steps li {
+    display: block;
+  }
+  .steps li:before {
+    content: counters(item, ".")". ";
+    counter-increment: item;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+li {
+    font-size: 1rem;
+}
+
+.card {
+    display: inline;
+}
+
+.card-columns {
+    display: inline-block;
+}
+
+@media only screen and (max-width: "1024px") {
+    .card-columns {
+      column-count:4;
+    }
+  }
