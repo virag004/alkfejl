@@ -44,7 +44,7 @@
 
 ## Adatbázis-terv
 
-![alt text](https://github.com/virag004/alkfejl/recipes.png)
+![alt text](https://github.com/virag004/alkfejl/blob/master/recipes.png)
 
 ## Végpont leírások
 
