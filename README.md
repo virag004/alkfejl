@@ -1,5 +1,9 @@
 # Recipes
 
+## Feladatleírás
+
+A feladatunk egy receptes oldal létrehozása volt, ahol kategóriákba szedve lehet megtekinteni az eddig adatbázisban szereplő recepteket. Lehet hozzáadni, szerkeszteni, törölni is a recepteket.
+
 ## Funkcionális követelmények
 
 - Vendég
@@ -38,9 +42,11 @@
 
 - Fejlesztői környezet
   - Intellij IDEA
+  - Visual Studio Code
 - Használt technológiák:
   - Java SE
   - Spring Boot
+  - Angular CLI
 
 ## Adatbázis-terv
 
@@ -53,3 +59,13 @@
 - POST /recipes/{id}: egy recept hozzáadása.
 - PUT /recipes/{id}: egy recept szerkesztése.
 - DELETE /recipes/{id}: egy recept törlése.
+
+## Használati eset diagram
+
+![alt text](https://github.com/virag004/alkfejl/blob/master/UseCaseDiagram.JPG)
+
+## Könyvtárstruktúra
+
+![alt text](https://github.com/virag004/alkfejl/blob/master/backend.png)
+
+![alt text](https://github.com/virag004/alkfejl/blob/master/frontend.png)
